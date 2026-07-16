@@ -4,52 +4,172 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HYUNDAI BLUETOOTH DOWNLOAD</title>
+
     <style>
-        body { font-family: 'Apple SD Gothic Neo', sans-serif; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; background-color: #f0f2f5; padding: 20px; }
-        .card { background: white; padding: 40px; border-radius: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); text-align: center; max-width: 300px; width: 100%; }
-        h1 { font-size: 24px; color: #333; margin-bottom: 10px; }
-        p { color: #666; margin-bottom: 25px; font-size: 14px; line-height: 1.5; }
-        .download-btn { color: white; padding: 15px 25px; text-decoration: none; border-radius: 12px; font-weight: bold; display: block; transition: transform 0.2s; margin-bottom: 12px; font-size: 15px; }
-        .download-btn:hover { transform: scale(1.05); opacity: 0.9; }
-        
-        /* 버튼 컬러 정의 */
-        .apk-btn { background-color: #007AFF; } /* 파랑: 앱 */
-        .pdf-btn { background-color: #5856D6; } /* 보라: 매뉴얼 */
-        .survey-btn { background-color: #34C759; } /* 초록: 설문조사 */
-        
-        .info { margin-top: 20px; font-size: 12px; color: #999; line-height: 1.6; border-top: 1px solid #eee; padding-top: 20px; }
+        body {
+            font-family: 'Apple SD Gothic Neo', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f2f5;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 340px;
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #666;
+            margin-bottom: 25px;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .section-title {
+            margin: 25px 0 12px;
+            color: #333;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        .download-btn {
+            color: white;
+            padding: 14px 18px;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            transition: transform 0.2s, opacity 0.2s;
+            margin-bottom: 12px;
+            font-size: 15px;
+        }
+
+        .download-btn:hover {
+            transform: scale(1.03);
+            opacity: 0.9;
+        }
+
+        .download-btn svg {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
+            flex-shrink: 0;
+        }
+
+        /* 버튼 컬러 */
+        .ios-btn {
+            background-color: #111111;
+        }
+
+        .android-btn {
+            background-color: #01875F;
+        }
+
+        .pdf-btn {
+            background-color: #5856D6;
+        }
+
+        .survey-btn {
+            background-color: #34C759;
+        }
+
+        .info {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #999;
+            line-height: 1.6;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
     </style>
 </head>
+
 <body>
     <div class="card">
         <h1>📱 블루투스 앱 및 매뉴얼</h1>
-        <p>현대그룹빌딩 EL 호출용<br>안드로이드 APK 파일입니다.</p>
+
+        <p>
+            현대그룹빌딩 EL 호출용<br>
+            H-MOVE 애플리케이션입니다.
+        </p>
+
         <p>
             <span style="color: #FF3B30; font-weight: bold;">
-        ⚠ 2026년 3월 11일 이전 설치하신 경우, <br> 앱 삭제 후 아래 앱 다운로드 버튼으로 <br>재설치 바랍니다.
-        
-            </span>    
+                ⚠ 2026년 3월 11일 이전 설치하신 경우,<br>
+                기존 앱 삭제 후 아래 설치 버튼을 통해<br>
+                재설치해 주시기 바랍니다.
+            </span>
         </p>
-        <a href="hyundai_260311.apk" download="hyundai_260311.apk" class="download-btn apk-btn">APP 다운로드</a>
-        
-        <a href="hyundai_manual_DSS_v1.pdf" download="hyundai_manual_DSS_v1.pdf" class="download-btn pdf-btn">설치 매뉴얼(PDF) 다운로드</a>
 
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLScxHLVC3ASrFQb6pnUTLSeC5ogm5FcsjY21K4wdjwIRBEhxLg/viewform?usp=dialog" target="_blank" class="download-btn survey-btn">💡 사용 만족도 설문조사</a>
-        
+        <div class="section-title">앱 설치</div>
+
+        <!-- iOS 앱 설치 -->
+        <a href="https://apps.apple.com/kr/app/h-move/id6752885617"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="download-btn ios-btn">
+
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.28.07 2.17.7 2.92.75 1.12-.23 2.19-.89 3.38-.8 1.43.12 2.51.68 3.22 1.7-2.95 1.77-2.25 5.66.46 6.75-.54 1.42-1.24 2.83-1.98 4.57zM12.03 7.25C11.88 5.14 13.6 3.4 15.57 3.23c.27 2.44-2.22 4.26-3.54 4.02z"/>
+            </svg>
+
+            iPhone용 앱 설치
+        </a>
+
+        <!-- 안드로이드 앱 설치 -->
+        <a href="https://play.google.com/store/apps/details?id=bluen.hyundai_seamless&amp;pcampaignid=web_share"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="download-btn android-btn">
+
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M17.6 9.48l1.84-3.18a.5.5 0 0 0-.86-.5l-1.87 3.23A11.38 11.38 0 0 0 12 8c-1.7 0-3.3.37-4.71 1.03L5.42 5.8a.5.5 0 0 0-.86.5L6.4 9.48A8.7 8.7 0 0 0 3 16h18a8.7 8.7 0 0 0-3.4-6.52zM8 13.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2zm8 0a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+            </svg>
+
+            Android용 앱 설치
+        </a>
+
+        <div class="section-title">설치 안내</div>
+
+        <!-- 설치 매뉴얼 사이트 -->
+        <a href="https://hdelevator.bluen.co.kr/guide/qrCode"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="download-btn pdf-btn">
+            📖 설치 매뉴얼 바로가기
+        </a>
+
+        <!-- 설문조사 -->
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScxHLVC3ASrFQb6pnUTLSeC5ogm5FcsjY21K4wdjwIRBEhxLg/viewform?usp=dialog"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="download-btn survey-btn">
+            💡 사용 만족도 설문조사
+        </a>
+
         <div class="info">
-            <br>추후 iOS APP 제공 예정입니다.<br><br>
             서비스 개선을 위해 소중한 의견을 부탁드립니다.<br>
             (문의: 스마트전장개발팀)
         </div>
     </div>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
